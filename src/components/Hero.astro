@@ -1,6 +1,7 @@
 ---
 import Icon from './Icon.astro';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { withBase } from '../utils/path';
 ---
 
 <section class="hero">
@@ -19,7 +20,7 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 				View Projects
 			</a>
 
-			<a href="/resume.pdf" class="secondary" target="_blank">
+			<a href={withBase("resume.pdf")} class="secondary" target="_blank">
 				<span class="icon"><Icon iconDefinition={faDownload} /></span>
 				Resume
 			</a>
