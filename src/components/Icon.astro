@@ -1,0 +1,17 @@
+---
+import { icon } from '@fortawesome/fontawesome-svg-core';
+
+interface Props {
+    iconDefinition: any;
+}
+
+const { iconDefinition } = Astro.props;
+
+if (!iconDefinition) {
+    return;
+}
+
+const renderedIcon = icon(iconDefinition).html.join('');
+---
+
+<Fragment set:html={renderedIcon} />

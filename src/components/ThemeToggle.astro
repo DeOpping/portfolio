@@ -1,0 +1,78 @@
+---
+import Icon from './Icon.astro';
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+---
+
+<button id="theme-toggle" aria-label="Toggle Theme">
+    <span class="sun"><Icon iconDefinition={faSun} /></span>
+    <span class="moon"><Icon iconDefinition={faMoon} /></span>
+</button>
+
+<script>
+    const button = document.getElementById("theme-toggle");
+
+    button?.addEventListener("click", () => {
+        document.documentElement.classList.toggle("light");
+        
+        const isLight = document.documentElement.classList.contains("light");
+
+        localStorage.setItem(
+            "theme",
+            isLight ? "light" : "dark"
+        );
+    });
+</script>
+
+<style>
+.sun,
+.moon {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease;
+}
+
+.sun :global(svg),
+.moon :global(svg) {
+    width: 18px;
+    height: 18px;
+}
+
+.moon {
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+:global(html.light) .sun {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+:global(html.light) .moon {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+button {
+    position: relative;
+
+    width: 24px;
+    height: 24px;
+
+    background: transparent;
+    border: none;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text);
+    cursor: pointer;
+}
+</style>

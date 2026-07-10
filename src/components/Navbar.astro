@@ -1,0 +1,65 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+---
+
+<nav>
+	<div class="logo">
+		NC
+	</div>
+	<div class="links">
+		<a href="#about">About</a>
+		<a href="#projects">Projects</a>
+		<a href="#skills">Skills</a>
+		<a href="#contact">Contact</a>
+
+		<ThemeToggle />
+	</div>
+</nav>
+
+<style>
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	
+	width: 100%;
+	z-index: 1000;
+	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 24px 48px;
+	
+	background: color-mix(
+		in srgb,
+		var(--background) 80%,
+		transparent
+	);
+
+	backdrop-filter: blur(2px);
+
+	transition:
+		background-color .3s ease,
+		color .3s ease;
+}
+
+.links {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+}
+
+.links a {
+	opacity: .8;
+	transition: .2s;
+}
+
+.links a:hover {
+	opacity: 1;
+}
+
+.logo {
+	font-size: 24px;
+	font-weight: bold;
+}
+</style>

@@ -1,0 +1,100 @@
+---
+import Icon from './Icon.astro';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+---
+
+<section id="contact">
+
+    <div class="container">
+
+        <h2>Let's Work Together</h2>
+
+        <p>
+            I'm always interested in discussing new projects,
+            game development opportunities, and interesting
+            technical challenges.
+        </p>
+
+        <div class="links">
+            <a href="mailto:reach_nicholas@outlook.com">
+                <span class="icon"><Icon iconDefinition={faEnvelope} /></span>
+                Email
+            </a>
+
+            <a href="https://github.com/DeOpping" target="_blank">
+                <span class="icon"><Icon iconDefinition={faGithub} /></span>
+                Github
+            </a>
+
+            <a href="https://www.linkedin.com/in/nicholas-call/" target="_blank">
+                <span class="icon"><Icon iconDefinition={faLinkedin} /></span>
+                LinkedIn
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>
+        © 2026 Nicholas Call. All rights reserved.
+    </p>
+</footer>
+
+<style>
+.container {
+    max-width: 800px;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+}
+
+p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.links a {
+    padding: .75rem 1.5rem;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    background: var(--surface);
+    color: var(--primary);
+
+    font-weight: 600;
+    transition: .25s;
+}
+
+.links a:hover {
+    transform: translateY(-3px);
+    background: var(--primary);
+    color: var(--background);
+}
+
+footer {
+    margin-top: 8rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid var(--surface);
+}
+
+footer p {
+    font-size: .9rem;
+}
+</style>

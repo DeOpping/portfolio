@@ -1,0 +1,89 @@
+<section id="skills">
+
+    <h2>Skills</h2>
+
+    <div class="categories">
+
+        <div class="category">
+            <h3>Programming</h3>
+
+            <div class="items">
+                <span>C++</span>
+                <span>C#</span>
+                <span>Java</span>
+            </div>
+        </div>
+
+        <div class="category">
+            <h3>Game Development</h3>
+
+            <div class="items">
+                <span>Unity</span>
+                <span>Unreal Engine 5</span>
+                <span>Gameplay Programming</span>
+                <span>Game Systems</span>
+            </div>
+        </div>
+
+        <div class="category">
+            <h3>Graphics & Tools</h3>
+
+            <div class="items">
+                <span>Vulkan</span>
+                <span>CMake</span>
+                <span>Dear ImGui</span>
+            </div>
+        </div>
+
+        <div class="category">
+            <h3>Development</h3>
+
+            <div class="items">
+                <span>Git</span>
+                <span>Gradle</span>
+                <span>Visual Studio</span>
+                <span>IntelliJ IDEA</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+}
+
+h3 {
+    margin-bottom: 1.5rem;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.category {
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: 16px;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+}
+
+.items span {
+    padding: .5rem 1rem;
+    background: var(--background);
+    color: var(--primary);
+    border-radius: 999px;
+    font-size: .9rem;
+}
+</style>

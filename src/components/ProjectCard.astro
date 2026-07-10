@@ -1,0 +1,139 @@
+---
+import Icon from './Icon.astro';
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+
+interface Props {
+    title: string;
+    description: string;
+    technologies: string[];
+    link?: string;
+    status?: string;
+    linkIcon?: IconDefinition;
+    statusIcon?: IconDefinition;
+}
+
+const { title, description, technologies, link, status, linkIcon, statusIcon } = Astro.props;
+---
+
+<article class="card">
+    <div class="content">
+
+        <h3>{title}</h3>
+
+        <p>
+            {description}
+        </p>
+
+        <div class="technologies">
+            {technologies.map((tech) => (
+                <span>{tech}</span>
+            ))}
+        </div>
+
+        {link && (
+            <a href={link} target="_blank">
+                {linkIcon && (
+                    <span class="icon"><Icon iconDefinition={linkIcon} /></span>
+                )}
+                View Project →
+            </a>
+        )}
+
+        {status && (
+            <span class="status">
+                {statusIcon && (
+                    <span class="icon"><Icon iconDefinition={statusIcon} /></span>
+                )}
+                {status}
+            </span>
+        )}
+
+    </div>
+</article>
+
+<style>
+.card {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    transition:
+        transform .25s ease,
+        background-color .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-top: auto;
+    margin-bottom: 1.5rem;
+}
+
+.technologies span {
+    background: var(--background);
+    color: var(--primary);
+    padding: .35rem .75rem;
+    border-radius: 999px;
+    font-size: .85rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+a,
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    line-height: normal;
+}
+
+a {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.status {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+}
+
+.icon :global(svg) {
+    width: 16px;
+    height: 16px;
+    display: block;
+    overflow: visible;
+}
+</style>

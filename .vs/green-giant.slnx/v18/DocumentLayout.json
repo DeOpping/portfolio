@@ -1,0 +1,123 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Nicho\\Desktop\\Desktop\\Portfolio\\green-giant\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nicho\\Desktop\\Desktop\\Portfolio\\green-giant\\src\\components\\About.astro||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\About.astro||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nicho\\Desktop\\Desktop\\Portfolio\\green-giant\\src\\layouts\\Layout.astro||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\layouts\\Layout.astro||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nicho\\Desktop\\Desktop\\Portfolio\\green-giant\\src\\styles\\global.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\styles\\global.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nicho\\Desktop\\Desktop\\Portfolio\\green-giant\\src\\components\\Hero.astro||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\Hero.astro||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nicho\\Desktop\\Desktop\\Portfolio\\green-giant\\src\\components\\Navbar.astro||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\Navbar.astro||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nicho\\Desktop\\Desktop\\Portfolio\\green-giant\\src\\pages\\index.astro||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\index.astro||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "global.css",
+              "DocumentMoniker": "C:\\Users\\Nicho\\Desktop\\Desktop\\Portfolio\\green-giant\\src\\styles\\global.css",
+              "RelativeDocumentMoniker": "src\\styles\\global.css",
+              "ToolTip": "C:\\Users\\Nicho\\Desktop\\Desktop\\Portfolio\\green-giant\\src\\styles\\global.css",
+              "RelativeToolTip": "src\\styles\\global.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwAgAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-07-09T21:55:54.124Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "About.astro",
+              "DocumentMoniker": "C:\\Users\\Nicho\\Desktop\\Desktop\\Portfolio\\green-giant\\src\\components\\About.astro",
+              "RelativeDocumentMoniker": "src\\components\\About.astro",
+              "ToolTip": "C:\\Users\\Nicho\\Desktop\\Desktop\\Portfolio\\green-giant\\src\\components\\About.astro",
+              "RelativeToolTip": "src\\components\\About.astro",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-07-09T22:20:05.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Hero.astro",
+              "DocumentMoniker": "C:\\Users\\Nicho\\Desktop\\Desktop\\Portfolio\\green-giant\\src\\components\\Hero.astro",
+              "RelativeDocumentMoniker": "src\\components\\Hero.astro",
+              "ToolTip": "C:\\Users\\Nicho\\Desktop\\Desktop\\Portfolio\\green-giant\\src\\components\\Hero.astro",
+              "RelativeToolTip": "src\\components\\Hero.astro",
+              "ViewState": "AgIAADQAAAAAAAAAAAAkwEIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-07-09T22:05:33.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Navbar.astro",
+              "DocumentMoniker": "C:\\Users\\Nicho\\Desktop\\Desktop\\Portfolio\\green-giant\\src\\components\\Navbar.astro",
+              "RelativeDocumentMoniker": "src\\components\\Navbar.astro",
+              "ToolTip": "C:\\Users\\Nicho\\Desktop\\Desktop\\Portfolio\\green-giant\\src\\components\\Navbar.astro",
+              "RelativeToolTip": "src\\components\\Navbar.astro",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAkwA4AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-07-09T22:00:25.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Layout.astro",
+              "DocumentMoniker": "C:\\Users\\Nicho\\Desktop\\Desktop\\Portfolio\\green-giant\\src\\layouts\\Layout.astro",
+              "RelativeDocumentMoniker": "src\\layouts\\Layout.astro",
+              "ToolTip": "C:\\Users\\Nicho\\Desktop\\Desktop\\Portfolio\\green-giant\\src\\layouts\\Layout.astro",
+              "RelativeToolTip": "src\\layouts\\Layout.astro",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-07-09T21:33:52.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "index.astro",
+              "DocumentMoniker": "C:\\Users\\Nicho\\Desktop\\Desktop\\Portfolio\\green-giant\\src\\pages\\index.astro",
+              "RelativeDocumentMoniker": "src\\pages\\index.astro",
+              "ToolTip": "C:\\Users\\Nicho\\Desktop\\Desktop\\Portfolio\\green-giant\\src\\pages\\index.astro",
+              "RelativeToolTip": "src\\pages\\index.astro",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-07-09T21:33:06.551Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

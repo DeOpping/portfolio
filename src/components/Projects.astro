@@ -1,0 +1,86 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLock } from '@fortawesome/free-solid-svg-icons';
+
+const projects = [
+    {
+        title: "Robo Run",
+        description: "Collaborated with a five-person team to develop Robo Run, a fast-paced first-person"
+            + " action game focused on speed, precision, and combat efficiency."
+            + " Implemented environmental hazards, player movement systems, moving platforms,"
+            + " interactive objects, and item pickups. Designed and developed a complete"
+            + " level focused on traversal and combat encounters.",
+        technologies: [
+            "C#",
+            "Unity",
+            "Gameplay Programming",
+            "Level Design",
+            "Team Development"
+        ],
+        link: "https://github.com/N-Call/FPS-Prototype/",
+        linkIcon: faGithub
+    },
+    {
+        title: "Vulkan Voxel Engine",
+        description: "Built a voxel engine from scratch in C++, Vulkan, and CMake featuring"
+            + " procedural terrain generation, chunk streaming, lighting, shaders, collision detection,"
+            + " and in-engine tools.",
+        technologies: [
+            "C++",
+            "Vulkan",
+            "CMake",
+            "GLFW",
+            "Dear ImGui",
+            "GLSL"
+        ],
+        status: "Private Repository",
+        statusIcon: faLock
+    },
+    {
+        title: "Bamboo Prison Core",
+        description: "Designed and developed a modualr framework powering a Minecraft Prison server."
+            + " Built reusable APIs for commands, GUIs, networking, configuration, packet interception,"
+            + " and event systems. Implemented procedural private mines using schematic parsing,"
+            + " fake block rendering through packet manipulation, multi-currency support, custom"
+            + " enchantments, and scalable gameplay systems.",
+        technologies: [
+            "Java",
+            "Paper API",
+            "Gradle",
+            "API Design",
+            "YAML",
+            "JSON"
+        ],
+        status: "Private Repository",
+        statusIcon: faLock
+    }
+];
+---
+
+<section id="projects">
+
+    <h2>Projects</h2>
+
+    <div class="grid">
+        {projects.map((project) => (
+            <ProjectCard {...project} />
+        ))}
+    </div>
+
+</section>
+
+<style>
+section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding-top: 6px;
+}
+</style>
