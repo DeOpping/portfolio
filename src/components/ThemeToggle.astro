@@ -3,24 +3,30 @@ import Icon from './Icon.astro';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 ---
 
-<button id="theme-toggle" aria-label="Toggle Theme">
+<button class="theme-toggle" aria-label="Toggle Theme">
     <span class="sun"><Icon iconDefinition={faSun} /></span>
     <span class="moon"><Icon iconDefinition={faMoon} /></span>
 </button>
 
 <script>
-    const button = document.getElementById("theme-toggle");
+const setupThemeToggle = () => {
+    const buttons = document.querySelectorAll(".theme-toggle");
 
-    button?.addEventListener("click", () => {
-        document.documentElement.classList.toggle("light");
+    buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+            document.documentElement.classList.toggle("light");
         
-        const isLight = document.documentElement.classList.contains("light");
+            const isLight = document.documentElement.classList.contains("light");
 
-        localStorage.setItem(
-            "theme",
-            isLight ? "light" : "dark"
-        );
+            localStorage.setItem(
+                "theme",
+                isLight ? "light" : "dark"
+            );
+        });
     });
+};
+
+setupThemeToggle();
 </script>
 
 <style>

@@ -1,20 +1,63 @@
 ---
 import ThemeToggle from './ThemeToggle.astro';
+import Icon from './Icon.astro';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 ---
 
 <nav>
 	<div class="logo">
 		NC
 	</div>
-	<div class="links">
+
+	<div class="mobile-controls">
+		<ThemeToggle />
+
+		<button class="menu-toggle" aria-label="Toggle Menu">
+			<span class="menu-icon">
+				<Icon iconDefinition={faBars} />
+			</span>
+
+			<span class="close-icon">
+				<Icon iconDefinition={faXmark} />
+			</span>
+		</button>
+	</div>
+
+	<div class="mobile-links">
 		<a href="#about">About</a>
 		<a href="#projects">Projects</a>
 		<a href="#skills">Skills</a>
 		<a href="#contact">Contact</a>
+	</div>
+
+	<div class="desktop-controls">
+		<div class="desktop-links">
+			<a href="#about">About</a>
+			<a href="#projects">Projects</a>
+			<a href="#skills">Skills</a>
+			<a href="#contact">Contact</a>
+		</div>
 
 		<ThemeToggle />
 	</div>
 </nav>
+
+<script>
+	const button = document.querySelector(".menu-toggle");
+	const links = document.querySelector(".mobile-links");
+
+	button?.addEventListener("click", () => {
+		button.classList.toggle("open");
+		links?.classList.toggle("open");
+	});
+
+	links?.querySelectorAll("a").forEach((link) => {
+		link.addEventListener("click", () => {
+			links.classList.remove("open");
+			button?.classList.remove("open");
+		});
+	});
+</script>
 
 <style>
 nav {
@@ -24,6 +67,8 @@ nav {
 	
 	width: 100%;
 	z-index: 1000;
+
+	isolation: isolate;
 	
 	display: flex;
 	justify-content: space-between;
@@ -43,23 +88,128 @@ nav {
 		color .3s ease;
 }
 
-.links {
+.desktop-links {
 	display: flex;
 	align-items: center;
 	gap: 32px;
 }
 
-.links a {
+.desktop-links a {
 	opacity: .8;
 	transition: .2s;
 }
 
-.links a:hover {
+.desktop-links a:hover {
 	opacity: 1;
+}
+
+.mobile-links {
+	display: none;
 }
 
 .logo {
 	font-size: 24px;
 	font-weight: bold;
+}
+
+.mobile-controls {
+	display: none;
+	align-items: center;
+	gap: 1rem;
+}
+
+.desktop-controls {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+}
+
+.menu-toggle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background: transparent;
+	border: none;
+
+	color: var(--text);
+	cursor: pointer;
+	padding: 0;
+}
+
+.menu-toggle :global(svg) {
+	width: 20px;
+	height: 20px;
+}
+
+.close-icon {
+	display: none;
+}
+
+.menu-toggle.open .menu-icon {
+	display: none;
+}
+
+.menu-toggle.open .close-icon {
+	display: block;
+}
+
+@media (max-width: 768px) {
+	nav {
+		padding: 20px 24px;
+	}
+
+	.mobile-controls {
+		display: flex;
+	}
+
+	.desktop-controls {
+		display: none;
+	}
+
+	.desktop-links {
+		display: none;
+	}
+
+	.mobile-links {
+		position: fixed;
+		z-index: -1;
+
+		overflow-y: auto;
+		
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 40vh;
+		
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		gap: 1.5rem;
+		padding-top: 100px;
+
+		background: var(--background);
+		border-bottom: 1px solid var(--surface);
+		box-shadow: 0 10px 20px rgba(0,0,0,.15);
+		
+		opacity: 0;
+		transform: translateY(-100%);
+		
+		visibility: hidden;
+		pointer-events: none;
+		
+		transition:
+			opacity .25s ease,
+			transform .35s ease,
+			visibility .35s ease;
+	}
+
+	.mobile-links.open {
+		opacity: 1;
+		transform: translateY(0);
+		visibility: visible;
+		pointer-events: auto;
+	}
 }
 </style>
